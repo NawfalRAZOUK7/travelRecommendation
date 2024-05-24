@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --nav-bg-color: #333;
+  --nav-bg-color-active: #111;
+  --green: #056767;
+  --green-team-memmber-card: rgba(5, 103, 103, 0.7);
+  --body-bg-color: rgba(3, 3, 3, 0.5);
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url("../resources/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--nav-bg-color);
+}
+
+nav {
+  background-color: var(--nav-bg-color);
+  color: white;
+}
+
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav li {
+  height: 50px;
+}
+
+nav a {
+  height: 100%;
+  padding: 0 30px;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+}
+
+nav a:hover {
+  background-color: var(--nav-bg-color-active);
+}
+
+nav ul li:first-child {
+  margin-right: auto;
+}
+
+nav ul a.navHomeIcon {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+nav ul a.navHomeIcon i {
+  font-size: 30px;
+  margin-right: 15px;
+}
+
+nav ul a.navHomeIcon h1 {
+  font-size: 20px;
+  padding: 0;
+}
+
+nav ul li.searchBar {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li.searchBar .container {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  margin: 0 30px;
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+
+nav ul li.searchBar input {
+  border: 0;
+  font-size: 15px;
+  width: 200px;
+}
+
+nav ul li.searchBar input:focus {
+  outline: none;
+}
+
+nav ul li.searchBar input::placeholder {
+  color: var(--green);
+}
+
+nav ul li.searchBar input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px white inset;
+}
+
+nav ul li.searchBar button {
+  cursor: pointer;
+  margin: 0 5px;
+  color: var(--green);
+  border: 0;
+  background-color: white;
+  font-size: 18px;
+}
+
+nav ul li.searchBar button:active {
+  transform: scale(0.95);
+}
+
+nav ul li.searchBar.hidden {
+  display: none;
+}
+
+.webContent {
+  flex: 1;
+  background-color: var(--nav-bg-color-active);
+  background: linear-gradient(
+    90deg,
+    var(--nav-bg-color) 0%,
+    rgba(3, 3, 3, 0) 100%
+  );
+  display: flex;
+  color: white;
+}
+
+.webContent .socialMedia {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.webContent .socialMedia a {
+  color: white;
+  font-size: 30px;
+  padding: 20px 30px;
+}
+
+.webContent .info {
+  margin: 100px 0;
+}
+
+.webContent .info h1 {
+  font-size: 100px;
+  font-weight: bold;
+  padding-left: 30px;
+}
+
+.webContent .info p {
+  font-size: 20px;
+  width: 60%;
+  padding: 30px 0 30px 30px;
+}
+
+.webContent .info button {
+  background-color: var(--green);
+  color: white;
+  border: 0;
+  font-size: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  padding: 10px 30px;
+  border-radius: 10px;
+}
+
+.webContent .info button:active {
+  transform: scale(0.95);
+}
+
+.recomendations {
+  height: 90vh;
+  width: 60%;
+  overflow-y: auto;
+}
+
+.recomendations .localTime-card {
+  background-color: var(--green);
+  border-radius: 10px;
+  margin: 20px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.recomendations .localTime-card span {
+  font-weight: bold;
+}
+
+.recomendations .recommendation-card {
+  background-color: white;
+  color: var(--nav-bg-color-active);
+  border-radius: 20px;
+  padding: 10px;
+  margin: 20px;
+}
+
+.recomendations .recommendation-card img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.recomendations .recommendation-card h1 {
+  margin: 5px 0;
+}
+
+.recomendations .recommendation-card p {
+  color: var(--nav-bg-color);
+}
+
+.recomendations .recommendation-card button {
+  cursor: pointer;
+  margin: 10px 0;
+  color: white;
+  background-color: var(--green);
+  padding: 3px 20px;
+  border: 0;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.recomendations .recommendation-card button:active {
+  transform: scale(0.95);
+}
+
+.ourTeam {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ourTeam h1 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+
+.ourTeam .teamMember-container {
+  background-color: var(--green-team-memmber-card);
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+  margin: 10px 5px;
+  padding: 20px 5px 10px 5px;
+}
+
+.ourTeam .teamMember-container .memberIcon {
+  border: 3px solid white;
+  border-radius: 50%;
+}
+
+.ourTeam .teamMember-container .memberIcon i {
+  padding: 10px;
+}
+
+.ourTeam .teamMember-container h2,
+.ourTeam .teamMember-container span {
+  padding: 5px 0;
+}
+
+.ourTeam .teamMember-container hr {
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+.ourTeam .teamMember-container .memberSocials a {
+  font-size: 20px;
+  margin: 10px 5px;
+  color: white;
+}
+
+.contactUsForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contactUsForm h1 {
+  font-size: 50px;
+  padding: 5px;
+}
+
+.contactUsForm p {
+  font-size: 20px;
+}
+
+.contactUsForm form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  background-color: var(--body-bg-color);
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.contactUsForm form label {
+  margin-right: auto;
+}
+
+.contactUsForm form .field {
+  width: 95%;
+  margin: 5px 0px 15px 0px;
+  font-size: 20px;
+  background-color: var(--body-bg-color);
+  border-radius: 10px;
+  border: 1px solid var(--nav-bg-color);
+  color: white;
+  padding: 5px 10px;
+}
+
+.contactUsForm form button {
+  background-color: var(--green);
+  color: white;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+.contactUsForm form button:active {
+  transform: scale(0.95);
+}
